@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "mediaSources": [
+    {
+      "factoryId": "web-selector",
+      "version": 2,
+      "arguments": {
+        "name": "Hanime169",
+        "description": "搜索需带 genre=裏番；选择器限定 .search-rows-wrapper",
+        "iconUrl": "https://simg-65.7132p.cc/27,gmwsIWD8a25W2BtT_zDn0_QZLAg/image/icon/tab_logo.png?secure=EJYLwnrDlidVi_wFp3DaGw==,4867726124",
+        "searchConfig": {
+          "searchUrl": "https://www.hanime169.com/search?genre=%E8%A3%8F%E7%95%AA&query={keyword}",
+          "searchUseOnlyFirstWord": false,
+          "searchRemoveSpecial": true,
+          "searchUseSubjectNamesCount": 1,
+          "rawBaseUrl": "https://www.hanime169.com",
+          "requestInterval": 3000,
+          "searchCacheTtl": 7200000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+          "subjectFormatId": "indexed",
+          "selectorSubjectFormatIndexed": {
+            "selectNames": ".search-rows-wrapper .home-rows-videos-title",
+            "selectLinks": ".search-rows-wrapper a[href*=\"/watch?v=\"]",
+            "linkTemplate": null,
+            "preferShorterName": true
+          },
+          "channelFormatId": "no-channel",
+          "selectorChannelFormatFlattened": {
+            "selectChannelNames": "",
+            "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
+            "selectEpisodeLists": "",
+            "selectEpisodesFromList": "",
+            "selectEpisodeLinksFromList": "",
+            "matchEpisodeSortFromName": ""
+          },
+          "selectorChannelFormatNoChannel": {
+            "selectEpisodes": "",
+            "selectEpisodeLinks": "",
+            "matchEpisodeSortFromName": ""
+          },
+          "defaultResolution": "1080P",
+          "defaultSubtitleLanguage": "CHS",
+          "onlySupportsPlayers": [],
+          "filterByEpisodeSort": false,
+          "selectMedia": {
+            "distinguishSubjectName": true,
+            "distinguishChannelName": false
+          },
+          "matchVideo": {
+            "enableNestedUrl": false,
+            "matchNestedUrl": "",
+            "matchVideoUrl": "(?<v>https?://[^\"'\\s]+?\\.mp4\\?secure=[^\"'\\s]+)",
+            "scanDomMediaUrls": true,
+            "scanInlineScriptUrls": true,
+            "cookies": "",
+            "addHeadersToVideo": {
+              "referer": "https://www.hanime169.com/"
+            }
+          },
+          "autoMatch": {
+            "enabled": true,
+            "searchUseOnlyFirstWord": false,
+            "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
+            "preferShorterName": true,
+            "filterByEpisodeSort": false
+          }
+        }
+      },
+      "tier": 1,
+      "channelTiers": {}
+    }
+  ]
+}
