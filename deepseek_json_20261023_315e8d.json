@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "mediaSources": [
+    {
+      "factoryId": "web-selector",
+      "version": 2,
+      "arguments": {
+        "name": "天天动漫 (ttdm7.me)",
+        "description": "直连；搜索/剧集已适配，视频经 iframe 嵌套提取",
+        "iconUrl": "https://static.ttfile.top/upload/mxprocms/20241022-1/607e09e081eb551dd290880e1fe29a90.png",
+        "searchConfig": {
+          "searchUrl": "https://www.ttdm7.me/vod-search/-------------/?wd={keyword}",
+          "searchUseOnlyFirstWord": false,
+          "searchRemoveSpecial": true,
+          "searchUseSubjectNamesCount": 1,
+          "rawBaseUrl": "",
+          "requestInterval": 3000,
+          "searchCacheTtl": 7200000,
+          "userAgent": "",
+          "subjectFormatId": "a",
+          "selectorSubjectFormatA": {
+            "selectLists": ".module-card-item-title > a",
+            "preferShorterName": true
+          },
+          "channelFormatId": "no-channel",
+          "selectorChannelFormatFlattened": {
+            "selectChannelNames": "",
+            "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
+            "selectEpisodeLists": "",
+            "selectEpisodesFromList": "",
+            "selectEpisodeLinksFromList": "",
+            "matchEpisodeSortFromName": ""
+          },
+          "selectorChannelFormatNoChannel": {
+            "selectEpisodes": ".module-play-list-link, a[href*='/vod-play/']",
+            "selectEpisodeLinks": "",
+            "matchEpisodeSortFromName": "第\\s*(?<ep>.+?)\\s*[话集]"
+          },
+          "defaultResolution": "1080P",
+          "defaultSubtitleLanguage": "CHS",
+          "onlySupportsPlayers": [],
+          "filterByEpisodeSort": false,
+          "selectMedia": {
+            "distinguishSubjectName": true,
+            "distinguishChannelName": false
+          },
+          "matchVideo": {
+            "enableNestedUrl": true,
+            "matchNestedUrl": "(?<v>https?://www\\.ttdm7\\.me/vod-play/[^\"'\\s]+\\?iframe=1)",
+            "matchVideoUrl": "(?<v>https?:\\\\?/\\\\?/[^\"'\\s]+?\\.(?:m3u8|mp4)[^\"'\\s]*)",
+            "cookies": "",
+            "addHeadersToVideo": {
+              "referer": "https://www.ttdm7.me/"
+            }
+          },
+          "autoMatch": {
+            "enabled": true,
+            "searchUseOnlyFirstWord": false,
+            "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
+            "preferShorterName": true,
+            "filterByEpisodeSort": false
+          }
+        }
+      },
+      "tier": 1,
+      "channelTiers": {}
+    }
+  ]
+}
