@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 2,
+  "mediaSources": [
+    {
+      "factoryId": "web-selector",
+      "version": 2,
+      "arguments": {
+        "name": "天天动漫 (ttdm7.me)",
+        "description": "直连；搜索可用，剧集选择器按苹果CMS常见结构推测",
+        "iconUrl": "https://static.ttfile.top/upload/mxprocms/20241022-1/607e09e081eb551dd290880e1fe29a90.png",
+        "searchConfig": {
+          "searchUrl": "https://www.ttdm7.me/vod-search/-------------/?wd={keyword}",
+          "searchUseOnlyFirstWord": false,
+          "searchRemoveSpecial": true,
+          "searchUseSubjectNamesCount": 1,
+          "rawBaseUrl": "",
+          "requestInterval": 3000,
+          "searchCacheTtl": 7200000,
+          "userAgent": "",
+          "subjectFormatId": "indexed",
+          "selectorSubjectFormatIndexed": {
+            "selectNames": ".module-poster-item-title",
+            "selectLinks": "a.module-poster-item",
+            "linkTemplate": null,
+            "preferShorterName": true
+          },
+          "channelFormatId": "index-grouped",
+          "selectorChannelFormatFlattened": {
+            "selectChannelNames": ".module-tab-item",
+            "matchChannelName": "^(?<ch>.+?)(\\d+)?$",
+            "selectEpisodeLists": ".module-play-list-content",
+            "selectEpisodesFromList": "a",
+            "selectEpisodeLinksFromList": "",
+            "matchEpisodeSortFromName": "第\\s*(?<ep>.+)\\s*[话集]"
+          },
+          "selectorChannelFormatNoChannel": {
+            "selectEpisodes": ".module-play-list-link, .module-play-list-content a",
+            "selectEpisodeLinks": "",
+            "matchEpisodeSortFromName": "(第\\s*(?<ep>.+)\\s*[话集])|(^\\s*(?<ep>\\d+)\\s*$)"
+          },
+          "defaultResolution": "1080P",
+          "defaultSubtitleLanguage": "CHS",
+          "onlySupportsPlayers": [],
+          "filterByEpisodeSort": true,
+          "selectMedia": {
+            "distinguishSubjectName": true,
+            "distinguishChannelName": false
+          },
+          "matchVideo": {
+            "enableNestedUrl": true,
+            "matchNestedUrl": "$^",
+            "matchVideoUrl": "(^http(s)?://(?!.*http(s)?://).+(\\.m3u8).*(\\?.+)?)",
+            "cookies": "",
+            "addHeadersToVideo": {
+              "referer": "https://www.ttdm7.me/"
+            }
+          },
+          "autoMatch": {
+            "enabled": true,
+            "searchUseOnlyFirstWord": false,
+            "searchRemoveSpecial": true,
+            "searchUseSubjectNamesCount": 1,
+            "preferShorterName": true,
+            "filterByEpisodeSort": true
+          }
+        }
+      },
+      "tier": 1,
+      "channelTiers": {}
+    }
+  ]
+}
